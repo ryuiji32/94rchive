@@ -11,6 +11,21 @@ body {
 	
 }
 
+.q {
+	color: lightgray;
+}
+.q:hover {
+	color: red; 
+	text-decoration: underline;
+}
+
+.date {
+	color: lightgray;
+}
+.date:hover {
+	color: skyblue;
+}
+
 
 
 .header-zone {
@@ -24,34 +39,34 @@ h1 {
 	text-align: center;
 	
 	color: white;
-	font-size: 300%;
+	font-size: 100%;
 	
 	font-weight: bold;
-	letter-spacing: 2px;
+	letter-spacing: 2%;
 
 }
 
 h2 {
 	text-align: center;
 	color: white;
-	font-size: 400%;
+	font-size: 130%;
 	
-	letter-spacing: 5px;
+	letter-spacing: 5%;
 }
 
 h3 {
 	color: white;
-	font-size: 200%;
+	font-size: 100%;
 	text-align: center;
 	
 
 }
 
 h4 {
-	color: gray;
+	color: lightgray;
 	position: fixed;
-	right: 20px;
-	bottom: 20px;
+	right: 20%;
+	bottom: 20%;
 	margin: 0;
 	z-index: 999;
 }
@@ -66,19 +81,34 @@ h5 {
 }
 
 h1, h2, h3, p, span, div {
-    white-space: nowrap !important;
+    word-break: keep-all;
 }
 
 ul {
 	position: relative;
 	width: 100%;
-	/*max-width: 1200px;
-	min-height: 500px; /* 이미지들이 위치할 최소 공간 확보 */
+	
 	list-style: none;
 	padding: 0;
 	margin: 0 ;
 }
 
+@media (max-width: 768px) {
+	ul.content-zone {
+		grid-template-columns: repeat(2, 1fr); /* 화면이 작아지면 2열 배치로 자동 조절 */
+		gap: 15px;
+	}
+	
+	h1 { font-size: 200%; } /* 글자 크기도 화면에 맞게 약간 축소 */
+	h2 { font-size: 250%; }
+	h3 { font-size: 130%; }
+}
+
+@media (max-width: 480px) {
+	ul.content-zone {
+		grid-template-columns: repeat(1, 1fr); /* 아주 작은 모바일에서는 1열 배치 */
+	}
+}
 
 .egg {
 	width: 100%;
@@ -86,25 +116,28 @@ ul {
 	max-width: 30%;
 	margin: 20px;
 	animation: floating-wb 12s ease-in-out infinite;
-	transition: transform 0.4s ease, filter 0.4s ease;
+	transition: transform 0.4s ease;
 }
 
 .egg0 {
 	position: fixed;        
-	left: 40%;
+	left: 30%;
 	top: 50%; 
 	width: 100px;
 	height: auto;
 	transform: translate(calc(-50% - 110px), -50%);
 	margin: 0;
 	z-index: 10;
+	animation: floating-wb 12s ease-in-out infinite;
+	transition: transform 0.4s ease;
+	
 }
 
 .egg01 {
 	position: fixed;        
-	left: 55%;
+	left: 50%;
 	top: 50%; 
-	width: 480px;
+	width: 490px;
 	height: auto;
 	transform: translate(calc(-50% + 110px), -50%);
 	margin: 0;
@@ -113,11 +146,12 @@ ul {
 
 .egg:hover {
 	transform: scale(1.1);         
-	filter: brightness(1.3);       
+	      
 	cursor: pointer;             	
 
 	animation-play-state: paused; 
 }
+
 
 .image-grid {
 	display: grid;
@@ -142,25 +176,26 @@ ul {
 	left: 10%;
 	top: 10%;
 	animation: floating-wb 12s ease-in-out infinite;
-	transition: transform 0.4s ease, filter 0.4s ease;
+	transition: transform 0.4s ease;
 }
 
 .wb0 {
 	position: fixed;        
-	left: 40%;
+	left: 30%;
 	top: 50%; 
 	width: 100px;
 	height: auto;
 	transform: translate(calc(-50% - 110px), -50%);
 	margin: 0;
 	z-index: 10;
+	transition: transform 0.4s ease;
 }
 
 .wb01 {
 	position: fixed;        
 	left: 50%;
 	top: 50%; 
-	width: 480px;
+	width: 490px;
 	height: auto;
 	transform: translate(calc(-50% + 110px), -50%);
 	margin: 0;
@@ -169,19 +204,18 @@ ul {
 
 .wb:hover {
 	transform: scale(1.1);         
-	filter: brightness(1.3);       
+	       
 	cursor: pointer;             	
 
 	animation-play-state: paused; 
 }
-
 
 .af {
 	width: 100%;
 	height: auto;
 	max-width: 30%;
 	animation: floating-wb 12s ease-in-out infinite;
-	transition: transform 0.4s ease, filter 0.4s ease;
+	transition: transform 0.4s ease;
 }
 
 .af0 {
@@ -193,13 +227,14 @@ ul {
 	transform: translate(calc(-50% - 110px), -50%);
 	margin: 0;
 	z-index: 10;
+	transition: transform 0.4s ease;
 }
 
 .af01 {
 	position: fixed;        
 	left: 50%;
 	top: 50%; 
-	width: 460px;
+	width: 310px;
 	height: auto;
 	transform: translate(calc(-50% + 110px), -50%);
 	margin: 0;
@@ -208,17 +243,19 @@ ul {
 
 .af:hover {
 	transform: scale(1.1);         
-	filter: brightness(1.3);       
+	      
 	cursor: pointer;             	
 
 	animation-play-state: paused; 
 }
+
+
 .bird {
 	width: 100%;
 	height: auto;
 	max-width: 25%;
 	animation: floating-wb 12s ease-in-out infinite;
-	transition: transform 0.4s ease, filter 0.4s ease;
+	transition: transform 0.4s ease;
 }
 
 .bird0 {
@@ -230,6 +267,7 @@ ul {
 	transform: translate(calc(-50% - 110px), -50%);
 	margin: 0;
 	z-index: 10;
+	transition: transform 0.4s ease;
 }
 
 .bird01 {
@@ -245,18 +283,19 @@ ul {
 
 .bird:hover {
 	transform: scale(1.1);         
-	filter: brightness(1.3);       
+	      
 	cursor: pointer;             	
 
 	animation-play-state: paused; 
 }
+
 
 .frog {
 	width: 100%;
 	height: auto;
 	max-width: 35%;
 	animation: floating-wb 12s ease-in-out infinite;
-	transition: transform 0.4s ease, filter 0.4s ease;
+	transition: transform 0.4s ease;
 }
 
 
@@ -264,11 +303,12 @@ ul {
 	position: fixed;        
 	left: 35%;
 	top: 50%; 
-	width: 310px;
+	width: 270px;
 	height: auto;
 	transform: translate(calc(-50% - 110px), -50%);
 	margin: 0;
 	z-index: 10;
+	transition: transform 0.4s ease;
 
 }
 
@@ -276,7 +316,7 @@ ul {
 	position: fixed;        
 	left: 60%;
 	top: 50%; 
-	width: 460px;
+	width: 430px;
 	height: auto;
 	transform: translate(calc(-50% + 110px), -50%);
 	margin: 0;
@@ -287,7 +327,7 @@ ul {
 
 .frog:hover {
 	transform: scale(1.1);         
-	filter: brightness(1.3);       
+	      
 	cursor: pointer;             	
 
 	animation-play-state: paused; 
@@ -298,25 +338,26 @@ ul {
 	height: auto;
 	max-width: 30%;
 	animation: floating-wb 12s ease-in-out infinite;
-	transition: transform 0.4s ease, filter 0.4s ease;
+	transition: transform 0.4s ease;
 }
 
 .butterfly0 {
 	position: fixed;        
-	left: 35%;
+	left: 30%;
 	top: 50%; 
-	width: 350px;
+	width: 230px;
 	height: auto;
 	transform: translate(calc(-50% - 110px), -50%);
 	margin: 0;
 	z-index: 10;
+	transition: transform 0.4s ease;
 }
 
 .butterfly01 {
 	position: fixed;        
-	left: 60%;
+	left: 50%;
 	top: 50%; 
-	width: 480px;
+	width: 400px;
 	height: auto;
 	transform: translate(calc(-50% + 110px), -50%);
 	margin: 0;
@@ -325,11 +366,12 @@ ul {
 
 .butterfly:hover {
 	transform: scale(1.1);         
-	filter: brightness(1.3);       
+	      
 	cursor: pointer;             	
 
 	animation-play-state: paused; 
 }
+
 .book {
 	position: fixed;        
 	left: ;
@@ -340,4 +382,5 @@ ul {
 	margin: 0;
 	z-index: 10;
 }
+
 
